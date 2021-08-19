@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/nav_home_icon_24"
+        android:title="Home"/>
+    <item
+        android:id="@+id/nav_factory"
+        android:icon="@drawable/nav_factory_icon_24"
+        android:title="Factory" />
+
+    <item
+        android:id="@+id/nav_store"
+        android:icon="@drawable/nav_store_icon_24"
+        android:title="Store"/>
+
+    <item
+        android:id="@+id/nav_storehouse"
+        android:icon="@drawable/nav_storehouse_icon_24"
+        android:title="Store House"/>
+    <item
+        android:id="@+id/nav_bank"
+        android:icon="@drawable/nav_bank_icon_24"
+        android:title="Bank"/>
+
+
+</menu>
