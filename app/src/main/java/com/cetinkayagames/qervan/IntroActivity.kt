@@ -14,7 +14,7 @@ class IntroActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_intro)
 
-        val FN_sharedPreferences = this.getSharedPreferences("UsersFactoryName", AppCompatActivity.MODE_PRIVATE)
+        val FN_sharedPreferences = this.getSharedPreferences("com.cetinkayagames.qervan", AppCompatActivity.MODE_PRIVATE)
 
 
         btn_intro.setOnClickListener {

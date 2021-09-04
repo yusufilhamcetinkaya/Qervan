@@ -12,21 +12,37 @@ import androidx.fragment.app.Fragment
 import com.cetinkayagames.qervan.fragments.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_home.*
+import kotlin.jvm.functions.FunctionN
+    var Money:Int=50000
+    var Shirt:Int=0
+    var BankDebt:Int=0
+    var MaxBankDebt:Int=100000
+    var BarrowAmount:Int=0
+    var RepayAmount:Int=0
+    var Fabric:Int=0
+    var ProductionRate:Int=0
+    var WareCapacity:Int=1000
+    var amountofFabric:Int=0
+    var amountofShirt:Int=0
+    var FabricPrice:Int=0
+    var ShirtPrice:Int=0
 
 class MainActivity : AppCompatActivity() {
-
     private val BankFragment=BankFragment()
     private val HomeFragment = HomeFragment()
     private val FactoryFragment= FactoryFragment()
     private val StoreFragment = StoreFragment()
     private val StoreHouseFragment= StoreHouseFragment()
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         replaceFragment(HomeFragment)
-        
+
+        val FN_sharedPreferences = this.getSharedPreferences("com.cetinkayagames.qervan", AppCompatActivity.MODE_PRIVATE)
 
 
         bottom_nav_bar.setOnNavigationItemSelectedListener{
@@ -48,6 +64,6 @@ class MainActivity : AppCompatActivity() {
             transaction.commit()
 
     }
-    
+
 
 }

@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.cetinkayagames.qervan.R
+import com.cetinkayagames.qervan.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_home.*
 
@@ -29,11 +29,20 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val fNsharedPreferences = requireActivity().getSharedPreferences("UsersFactoryName", Context.MODE_PRIVATE)
+        val fNsharedPreferencesHome = requireActivity().getSharedPreferences("com.cetinkayagames.qervan", Context.MODE_PRIVATE)
 
-        val usersFactoryName= fNsharedPreferences.getString("UsersFactoryNameSP","")
+        val usersFactoryName= fNsharedPreferencesHome.getString("UsersFactoryNameSP","")
 
         FactoryName.text="Your Factory Name: ${usersFactoryName}"
+
+        tw_money.text="Money: ${Money}"
+
+        tw_shirt.text="Shirt: ${Shirt}/${WareCapacity}"
+
+        tw_fabric.text="Fabric: ${Fabric}"
+
+        tw_productionRate.text="Production Rate: ${ProductionRate}"
+
     }
 
 }

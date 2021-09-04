@@ -15,7 +15,7 @@
         android:text="Cetinkaya Games"
         android:textColor="#D6D2D2"
         android:textColorHighlight="#AE8F8F"
-        android:textSize="41sp"
+        android:textSize="@dimen/_28sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -10,28 +10,28 @@
 
     <ImageView
         android:id="@+id/iw_bank_svg"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="24dp"
-        android:src="@drawable/bank_svg"
+        android:layout_width="@dimen/_90sdp"
+        android:layout_height="@dimen/_90sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:src="@drawable/store_svg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cw_bank"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
         android:background="#000000"
         app:cardBackgroundColor="#EF8362"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="5dp"
-        app:layout_constraintBottom_toTopOf="@id/cw_tax_office"
+        app:cardCornerRadius="@dimen/_8sdp"
+        app:cardElevation="@dimen/_4sdp"
+        app:layout_constraintBottom_toTopOf="@id/cw_bank"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iw_bank_svg">
@@ -39,8 +39,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="16dp">
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/tw_bank"
@@ -48,42 +47,52 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/kollektif_bold"
                 android:gravity="center"
+                android:layout_marginTop="@dimen/_4sdp"
                 android:text="BANK"
                 android:textColor="#224A50"
-                android:textSize="30sp" >
+                android:textSize="@dimen/_20sdp">
 
             </TextView>
 
             <TextView
-                android:id="@+id/tw_bank_debt"
+                android:id="@+id/tw_bank_debt_max"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/kollektif"
-                android:layout_marginTop="15dp"
-                android:text="Bank Debt: 25.000$"
+                android:text="Maximum debt: 450000$"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
                 android:textColor="#363A43"
-                android:textSize="24sp" >
+                android:textSize="@dimen/_16sdp">
 
             </TextView>
 
           <EditText
-              android:id="@+id/et_amountofdebt"
+              android:id="@+id/et_amountofbarrow"
+              android:inputType="number"
+              android:digits="1234567890"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:hint="Amount of Debt"
-              android:layout_marginTop="15dp"/>
+              android:layout_marginTop="@dimen/_4sdp"
+              android:layout_marginStart="@dimen/_4sdp"
+              android:layout_marginEnd="@dimen/_4sdp"/>
 
             <Button
-                android:id="@+id/btn_repay"
+                android:id="@+id/btn_borrow"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Repay"
+                android:text="borrow"
                 android:fontFamily="@font/kollektif"
                 android:textAlignment="center"
-                android:textSize="15dp"
-                android:layout_marginTop="15dp"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
                 android:textColor="#23252B"
-                android:background="@drawable/custom_button2" >
+                android:background="@drawable/custom_button2">
 
             </Button>
 
@@ -96,15 +105,15 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cw_tax_office"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="25dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
         android:background="#000000"
         app:cardBackgroundColor="#EF8362"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="5dp"
+        app:cardCornerRadius="@dimen/_8sdp"
+        app:cardElevation="@dimen/_4sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -115,39 +124,50 @@
 
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="16dp">
+            android:orientation="vertical">
             <TextView
                 android:id="@+id/text_tax_office"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="TAX OFFICE"
+                android:layout_marginTop="@dimen/_4sdp"
                 android:fontFamily="@font/kollektif_bold"
                 android:textAlignment="center"
                 android:textColor="#224A50"
-                android:textSize="30sp"/>
+                android:textSize="@dimen/_20sdp"/>
 
             <TextView
-                android:id="@+id/tw_backtaxes"
+                android:id="@+id/tw_bank_debt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Your Back Taxes: 5.000$"
                 android:fontFamily="@font/kollektif"
-                android:layout_marginTop="15dp"
+                android:text="Bank Debt: 46.000$"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
                 android:textColor="#363A43"
-                android:textSize="24sp" />
+                android:textSize="@dimen/_16sdp" />
 
             <EditText
+                android:id="@+id/et_amountofrepay"
+                android:inputType="number"
+                android:digits="1234567890"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Amount of Tax"
-                android:layout_marginTop="15dp"/>
+                android:hint="Amount of Debt"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginEnd="@dimen/_4sdp"/>
 
             <Button
+                android:id="@+id/btn_repay"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Pay Tax"
-                android:layout_marginTop="15dp"
+                android:text="Repay"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
                 android:background="@drawable/custom_button2"
                 android:textColor="#23252B"/>
 
